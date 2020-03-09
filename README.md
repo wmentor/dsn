@@ -12,26 +12,26 @@ The simplest way to parse them in Golang is regular expressions:
 package main
 
 import (
-	"fmt"
-	"regexp"
+  "fmt"
+  "regexp"
 )
 
 var rex = regexp.MustCompile("(\\w+)=(\\w+)")
 
 func main() {
-	conn := `user=mylogin password=mypass database=mydb
-                 host=127.0.0.1 port=5432 sslmode=true`
+  conn := `user=mylogin password=mypass database=mydb
+           host=127.0.0.1 port=5432 sslmode=true`
 
-	data := rex.FindAllStringSubmatch(conn, -1)
+  data := rex.FindAllStringSubmatch(conn, -1)
 
-	res := make(map[string]string)
-	for _, kv := range data {
-		k := kv[1]
-		v := kv[2]
-		res[k] = v
-	}
+  res := make(map[string]string)
+  for _, kv := range data {
+    k := kv[1]
+    v := kv[2]
+    res[k] = v
+  }
 
-	fmt.Println(res)
+  fmt.Println(res)
 }
 ```
 
@@ -62,7 +62,7 @@ func main() {
   ds, err := dsn.New(str)
   if err != nil {
     panic("invalid string")
-  }n
+  }
 
   // print user=mylogin
   fmt.Printf( "user=%s\n", ds.GetString("user","unknown") )
