@@ -1,5 +1,11 @@
 # dsn
 
+![test](https://github.com/wmentor/dsn/workflows/test/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/wmentor/dsn/badge.svg?branch=master&v=1.0.4)](https://coveralls.io/github/wmentor/dsn?branch=master)
+[![https://goreportcard.com/report/github.com/wmentor/dsn](https://goreportcard.com/badge/github.com/wmentor/dsn)](https://goreportcard.com/report/github.com/wmentor/dsn)
+[![https://pkg.go.dev/github.com/wmentor/dsn](https://pkg.go.dev/badge/github.com/wmentor/dsn.svg)](https://pkg.go.dev/github.com/wmentor/dsn)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 We often work with configuration strings like pq database connection:
 
 ```
